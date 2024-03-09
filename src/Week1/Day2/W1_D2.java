@@ -5,24 +5,23 @@ import java.util.*;
 public class W1_D2 {
     public static void main(String[] args){
        Scanner sc = new Scanner(System.in);
-       LinkedList<Integer> q = new LinkedList<>();
+        LinkedList<Integer> list = new LinkedList<>();
 
        int n = sc.nextInt();
        int k = sc.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-            q.offer(i);
-        }
-
         int index = 0;
 
+        for (int i = 1; i <= n; i++) {
+            list.offer(i);
+        }
         System.out.print("<");
-        while (!q.isEmpty()) {
-            index = (index + (k - 1)) % q.size();
-            if(q.size() != 1) {
-                System.out.print(q.remove(index) + ", ");
+        while (!list.isEmpty()) {
+            index = (index + (k - 1)) % list.size();
+            if(list.size() != 1) {
+                System.out.print(list.remove(index) + ", ");
             }else{
-                System.out.print(q.remove(index));
+                System.out.print(list.remove(index));
             }
         }
 
