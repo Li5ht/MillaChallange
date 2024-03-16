@@ -28,8 +28,6 @@ public class W2_D3 {
                 mapping.add(num);
         }
 
-
-
         //2. 매핑list 정렬 (오름차순)
         Collections.sort(mapping);
 
